@@ -1,2 +1,2 @@
-# VLSI-Circuit-Designs
-This  repository is dedicated to hold all the circuit designs 
+# 4-Bit Multiplier
+This  repository is dedicated to hold the code which could design and simulate the working of a 4 bit multiplier
