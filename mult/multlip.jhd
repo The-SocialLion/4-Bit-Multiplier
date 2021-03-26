@@ -1,0 +1,3 @@
+MODULE multlip
+SUBMODULE mult
+INSTANCE UUT

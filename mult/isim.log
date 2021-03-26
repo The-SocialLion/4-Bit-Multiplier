@@ -1,0 +1,27 @@
+ command line:
+   ./multlip_isim_beh.exe
+     -intstyle  ise
+     -ipchost  localhost
+     -ipcport  65199
+
+Fri Mar 26 15:47:34 2021
+
+Total Line Count : 62
+
+ Elaboration time : 0 sec.
+
+ Estimate current memory usage : 158.114 Meg. 
+
+ Total Signals          : 19
+ Total Nets             : 70
+ Total Signal Drivers   : 13
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 16
+ Total Traceable Variables  : 19
+ Total Scalar Nets and Variables : 157
+ntrace select -o on -m / -l this 
+ntrace start 
+isimrun 1000 ns 
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.

@@ -1,0 +1,3 @@
+MO multlip NULL D:/Xilinix/experiments/mult/multlip.tfw vlg67/multlip.bin 1616753843
+MO mult NULL D:/Xilinix/experiments/mult/mult.v vlg36/mult.bin 1616753843
+MO glbl NULL C:/Xilinx92i/verilog/src/glbl.v vlg2D/glbl.bin 1616753843

@@ -1,0 +1,74 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2007 Xilinx, Inc.
+// All Right Reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 9.2i
+//  \   \         Application : ISE
+//  /   /         Filename : multlip.ant
+// /___/   /\     Timestamp : Fri Mar 26 15:47:10 2021
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: 
+//Design Name: multlip
+//Device: Xilinx
+//
+`timescale 1ns/1ps
+
+module multlip;
+    reg [3:0] a = 4'b0000;
+    reg [3:0] b = 4'b0000;
+    wire [7:0] p;
+
+
+    mult UUT (
+        .a(a),
+        .b(b),
+        .p(p));
+
+    integer TX_FILE = 0;
+    integer TX_ERROR = 0;
+    
+    initial begin    // Annotation process
+        #0;
+        ANNOTATE_p;
+        forever begin
+            #50;
+            ANNOTATE_p;
+            #50;
+        end
+    end
+
+    initial begin  // Open the annotations file...
+        TX_FILE = $fopen("D:\\Xilinix\\experiments\\mult\\multlip.ano");
+        #1000 // Final time:  1000 ns
+        $display("Success! Annotation Simulation Complete.");
+        $fdisplay(TX_FILE, "Total[%d]", TX_ERROR);
+        $fclose(TX_FILE);
+        $finish;
+    end
+
+    initial begin
+        // -------------  Current Time:  100ns
+        #100;
+        a = 4'b1101;
+        b = 4'b1001;
+        // -------------------------------------
+        // -------------  Current Time:  300ns
+        #200;
+        a = 4'b0110;
+    end
+
+    task ANNOTATE_p;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,p,%b]", $time, p);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+endmodule
+

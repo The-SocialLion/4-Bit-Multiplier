@@ -1,0 +1,7 @@
+V3 7
+FL $XILINX/verilog/src/glbl.v 2007/05/19.02:52:56 J.36
+MO work/glbl FL $XILINX/verilog/src/glbl.v
+FL D:/Xilinix/experiments/mult/mult.v 2021/03/26.15:45:48 J.36
+MO work/mult FL D:/Xilinix/experiments/mult/mult.v
+FL D:/Xilinix/experiments/mult/multlip.tfw 2021/03/26.15:47:10 J.36
+MO work/multlip FL D:/Xilinix/experiments/mult/multlip.tfw MI mult
